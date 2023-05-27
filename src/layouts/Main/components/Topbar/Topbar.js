@@ -149,7 +149,7 @@ const Topbar = ({
               href="https://material-ui.com/store/items/webbee-landing-page/"
               size="large"
             >
-              Purchase now
+              Login/signup
             </Button>
           </Box>
         </Box>

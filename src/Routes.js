@@ -126,7 +126,7 @@ const Routes = () => {
       />
       <Route
         exact
-        path="/landing-course"
+        path="/book-your-demo"
         render={(matchProps) => (
           <WithLayout
             {...matchProps}

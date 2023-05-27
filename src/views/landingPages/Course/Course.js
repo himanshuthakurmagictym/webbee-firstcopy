@@ -7,14 +7,14 @@ import Container from 'common/Container';
 import {
   Hero,
   About,
-  ContactForm,
+
   Faq,
-  Footer,
-  Overview,
+
+
   Reviews,
 } from './components';
-
-const Course = ({ themeMode = 'light' }) => {
+import Partners2 from '../Marketing/components/Partners/Partners2';
+const Course = () => {
   const theme = useTheme();
   return (
     <Box>
@@ -45,12 +45,12 @@ const Course = ({ themeMode = 'light' }) => {
           <Reviews />
         </Container>
       </Box>
-      <Container paddingY={0}>
+      {/* <Container paddingY={0}>
         <Divider />
-      </Container>
-      <Container>
+      </Container> */}
+      {/* <Container>
         <Overview themeMode={themeMode} />
-      </Container>
+      </Container> */}
       <Box bgcolor={theme.palette.alternate.main}>
         <Box
           component={'svg'}
@@ -77,14 +77,19 @@ const Course = ({ themeMode = 'light' }) => {
           <Faq />
         </Container>
       </Box>
+      <Box bgcolor={theme.palette.alternate.main}>
       <Container>
+          <Partners2 />
+        </Container>
+        </Box>
+      {/* <Container>
         <ContactForm />
       </Container>
       <Box bgcolor={theme.palette.primary.dark}>
         <Container>
           <Footer />
         </Container>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

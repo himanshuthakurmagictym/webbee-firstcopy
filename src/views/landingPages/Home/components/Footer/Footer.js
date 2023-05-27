@@ -25,9 +25,9 @@ const Footer = () => {
         gutterBottom
         align={'center'}
       >
-        Get started with Webbee today
+        Get started with Aaiena today
       </Box>
-      <Typography
+      {/* <Typography
         variant={'h6'}
         component={'p'}
         color={'textSecondary'}
@@ -35,7 +35,7 @@ const Footer = () => {
       >
         Build a beautiful, modern website with flexible, fully customizable,
         atomic Material-UI components.
-      </Typography>
+      </Typography> */}
       <Box marginTop={3} display={'flex'} justifyContent={'center'}>
         <Button
           component={'a'}
@@ -62,7 +62,7 @@ const Footer = () => {
             </svg>
           }
         >
-          Purchase now
+          Lunch Now
         </Button>
       </Box>
     </Box>
