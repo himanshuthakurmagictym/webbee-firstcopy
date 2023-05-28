@@ -7,10 +7,23 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
-
+// import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+// import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 const Hero = () => {
   const theme = useTheme();
+  const [cCode, setcCode] = React.useState('91');
+  const [formField, setformField] = React.useState({});
+  const handleChange = (event) => {
+    setformField((pre)=>({...pre, [event.target.name]: event.target.value}));
+    setcCode(event.target.value);
+  };
 
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    console.log(formField);
+  };
   const GridItemHeadlineBlock = () => (
     <Box>
       <Typography
@@ -74,16 +87,19 @@ const Hero = () => {
       boxShadow={1}
       data-aos={'fade-left'}
     >
-      <form noValidate autoComplete="off">
+      <form onSubmit={handleSubmit}>
         <Box display="flex" flexDirection={'column'}>
           <Box marginBottom={2}>
             <TextField
               sx={{ height: 54 }}
-              label="Full name"
+              label="Name"
               variant="outlined"
               color="primary"
               size="medium"
+              name="name"
               fullWidth
+              required
+              onChange={handleChange}
             />
           </Box>
           <Box marginBottom={2}>
@@ -91,21 +107,76 @@ const Hero = () => {
               sx={{ height: 54 }}
               label="Email"
               type="email"
+              name="email"
               variant="outlined"
               color="primary"
               size="medium"
               fullWidth
+              required
+              onChange={handleChange}
             />
+          </Box>
+         
+          <Box marginBottom={2} xs={12} sm={12} style={{display:'flex'}}>
+          <Grid  xs={12} sm={3}>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                defaultValue={91}
+                value={cCode}
+                name="cCode"
+                label="cCode"
+                onChange={handleChange}
+              >
+                <MenuItem value={91}>+91</MenuItem>
+                <MenuItem value={44}>+44</MenuItem>
+                <MenuItem value={41}>+41</MenuItem>
+              </Select>
+            </Grid>
+            <Grid  xs={6} sm={10}>
+            <TextField
+              sx={{ height: 54 }}
+              label="Mobile"
+              type="text"
+              name="mobile"
+              variant="outlined"
+              color="primary"
+              size="medium"
+              fullWidth
+              required
+              onChange={handleChange}
+            />
+            </Grid>
           </Box>
           <Box marginBottom={2}>
             <TextField
               sx={{ height: 54 }}
-              label="Password"
-              type="password"
+              label="Website"
+              type="text"
+              name="website"
               variant="outlined"
               color="primary"
               size="medium"
               fullWidth
+              required
+              onChange={handleChange}
+            />
+          </Box>
+          <Box marginBottom={2}>
+            <TextField
+              sx={{ height: 84 }}
+              label="Message"
+              type="text"
+              name="message"
+              multiline
+              rows={2}
+              maxRows={4}
+              variant="outlined"
+              color="primary"
+              size="medium"
+              fullWidth
+              required
+              onChange={handleChange}
             />
           </Box>
           <Box>
@@ -116,7 +187,7 @@ const Hero = () => {
               size="medium"
               fullWidth
             >
-              Create an account
+              Submit
             </Button>
           </Box>
           <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>

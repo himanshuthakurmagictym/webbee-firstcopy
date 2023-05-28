@@ -88,9 +88,9 @@ const Cover = () => {
                   variant="contained"
                   color="primary"
                   size="large"
-                  href={'/'}
+                  href={'https://demo.aaiena.shop'}
                 >
-                  Contact us
+                  Take A Tour 
                 </Button>
               </Box>
             </Box>

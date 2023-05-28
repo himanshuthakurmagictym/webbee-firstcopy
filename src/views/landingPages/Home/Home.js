@@ -70,11 +70,9 @@ const Home = ({ themeMode = 'light' }) => {
   return (
     <Box>
       <Box position={'relative'} disableGutters={true}>
-        {/* <Container > */}
-        <video controls width="100%" height="60%" autoPlay muted>
+        <video width="100%" height="100%" autoPlay muted>
           <source type="video/mp4" src="/assets/video/banner.mp4" />
         </video>
-        {/* </Container> */}
       </Box>
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
         <Container position="relative" zIndex={2}>

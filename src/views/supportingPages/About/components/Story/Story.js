@@ -1,12 +1,12 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TeamWorkingIllustration from 'svg/illustrations/TeamWorking';
 
 const Story = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
   return (
     <Box>
       <Box marginBottom={4}>
@@ -82,7 +82,7 @@ const Story = () => {
           <TeamWorkingIllustration height={'100%'} width={'100%'} />
         </Box>
       </Box>
-      <Box>
+      {/* <Box>
         <Typography
           sx={{
             textTransform: 'uppercase',
@@ -120,7 +120,7 @@ const Story = () => {
             </Box>
           ))}
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
